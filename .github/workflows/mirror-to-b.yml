@@ -1,0 +1,26 @@
+name: Mirror to Account B
+
+on:
+  push:
+    branches: ['**']
+    tags: ['**']
+  delete:
+  create:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'markoeleks'
+    steps:
+      - name: Mirror
+        env:
+          MIRROR_PAT: ${{ secrets.MIRROR_PAT }}
+        run: |
+          git config --global credential.helper store
+          echo "https://x-access-token:${{ github.token }}@github.com" > ~/.git-credentials
+          git clone --mirror "https://github.com/${{ github.repository }}.git" repo.git
+          echo "https://x-access-token:${MIRROR_PAT}@github.com" > ~/.git-credentials
+          cd repo.git
+          git push --prune \
+            "https://github.com/markoprljic/${{ github.event.repository.name }}.git" \
+            '+refs/heads/*:refs/heads/*' '+refs/tags/*:refs/tags/*'
