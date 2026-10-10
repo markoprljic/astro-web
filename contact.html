@@ -1,145 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact · Astro Synapse</title>
-  <meta name="description" content="Tell us what you're trying to solve. We will tell you honestly whether AI is the right answer, and what it would take to build it.">
-  <link rel="canonical" href="https://astrosynapse.ai/contact.html">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://astrosynapse.ai/contact.html">
-  <meta property="og:title" content="Contact · Astro Synapse">
-  <meta property="og:description" content="Tell us what you're trying to solve. We will tell you honestly whether AI is the right answer.">
-  <meta property="og:image" content="https://astrosynapse.ai/public/logo/logo.png">
-  <meta name="twitter:card" content="summary">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add("js");</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · Astro Synapse</title>
+<meta name="description" content="Tell us what you are trying to solve. We will tell you honestly whether AI is the right answer, and what it would take to build it.">
+<link rel="canonical" href="https://astrosynapse.ai/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astrosynapse.ai/contact.html">
+<meta property="og:title" content="Contact · Astro Synapse">
+<meta property="og:description" content="Tell us what you are trying to solve. We will tell you honestly whether AI is the right answer, and what it would take to build it.">
+<meta property="og:image" content="https://astrosynapse.ai/public/video/deep-space.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#04050a">
+<link rel="icon" href="public/logo/logo-white-icon.svg">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="fx-grain" aria-hidden="true"></div>
-  <div class="fx-vignette" aria-hidden="true"></div>
-  <canvas class="fx-orbs" data-orbs aria-hidden="true"></canvas>
-  <div class="cursor" data-cursor aria-hidden="true"></div>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="site-header">
-    <div class="site-header__inner wrap">
-      <a class="brand" href="index.html">
-        <img src="public/logo/logo-white.png" width="32" height="28" alt="">
-        <span>Astro Synapse</span>
-        <span class="brand__code">ST/05</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="use-cases.html">Use Cases</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="btn btn--nav" href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="fx-grain" aria-hidden="true"></div>
+<div class="fx-vignette" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html" aria-label="Astro Synapse home">
+      <svg class="brand__mark" viewBox="0 0 39 34" width="32" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 .5h13l12 21h-13zM6.5 11.5h14l-7 10-7 11-6.5-11zM13.5 22.5h13l6 11h-13z"/></svg>
+      <span>Astro Synapse</span><span class="brand__code">ST/05</span>
+    </a>
+    <div class="hdr-actions">
+      <a class="btn btn--nav is-solid" href="contact.html">Let's talk</a>
+      <button class="btn btn--nav" id="menuBtn" aria-expanded="false" aria-controls="menu"><span id="menuLbl">Menu</span><span class="burger" aria-hidden="true"><i></i><i></i></span></button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
-    <section class="hero hero--page">
-      <div class="hero__stage" aria-hidden="true">
-        <div class="hero__ring"></div>
-        <div class="hero__orb"></div>
-      </div>
-      <div class="wrap hero__copy">
-        <p class="kicker"><span>05. Signal</span><span>Dublin</span></p>
-        <h1>Tell us what you're trying to solve.</h1>
-        <p class="lede">We will tell you honestly whether AI is the right answer, and what it would take to build it.</p>
-      </div>
-    </section>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Primary">
+    <a href="index.html"><span class="menu__idx">01</span>Home</a>
+    <a href="solutions.html"><span class="menu__idx">02</span>Solutions</a>
+    <a href="products.html"><span class="menu__idx">03</span>Products</a>
+    <a href="use-cases.html"><span class="menu__idx">04</span>Use Cases</a>
+    <a href="about.html"><span class="menu__idx">05</span>About</a>
+    <a href="contact.html" aria-current="page"><span class="menu__idx">06</span>Contact</a>
+  </nav>
+  <aside class="menu__side">
+    <div><h5>Business enquiry</h5><a href="contact.html">Start a project →</a></div>
+    <div><h5>Social</h5><div class="menu__row">
+      <a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a>
+      <a href="https://www.linkedin.com/company/astro-synapse/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/AstroSynapseLab" target="_blank" rel="noopener">GitHub</a>
+    </div></div>
+    <div><h5>Astro Synapse Limited</h5><p>71 Lower Baggot Street, Dublin 2, D02 P593, Ireland</p></div>
+  </aside>
+</div>
 
-    <section class="section">
-      <div class="wrap" data-reveal>
-        <!--
-          FORMSPREE: this posts to the live Astro Synapse form already used on astrosynapse.ai
-          (https://formspree.io/f/mbjvkrja). Swap the action URL if you create a new form.
-        -->
-        <form class="form" data-form action="https://formspree.io/f/mbjvkrja" method="POST">
-          <label>
-            First name
-            <input type="text" name="first_name" autocomplete="given-name" required>
-          </label>
-          <label>
-            Last name
-            <input type="text" name="last_name" autocomplete="family-name" required>
-          </label>
-          <label>
-            Work email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>
-            Company
-            <input type="text" name="company" autocomplete="organization">
-          </label>
-          <label>
-            What do you need to build?
-            <textarea name="message" rows="8" required></textarea>
-          </label>
-          <button class="btn btn--primary" type="submit">Send message →</button>
-          <p class="form-status" data-form-status hidden></p>
-        </form>
-      </div>
-    </section>
+<main id="main">
 
-    <section class="section section--tight section--void">
-      <div class="wrap" data-reveal>
-        <h2>Direct contact</h2>
-        <p class="direct-contact">Email: <a href="mailto:info@astrosynapse.ai">info@astrosynapse.ai</a></p>
-        <h2>Company</h2>
-        <p>Astro Synapse Limited</p>
-        <address class="address">71 Lower Baggot Street, Dublin 2, Co. Dublin, D02 P593, Ireland</address>
-        <ul class="social">
-          <li><a href="https://twitter.com/astrosynapselab" rel="noopener noreferrer">Twitter/X</a></li>
-          <li><a href="https://www.linkedin.com/company/astro-synapse/" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/AstroSynapseLab" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="public/video/deep-space.jpg">
+      <source src="public/video/deep-space.webm" type="video/webm">
+      <source src="public/video/deep-space.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap page-hero__grid">
+    <div>
+      <p class="kicker" data-reveal><span>05. Signal</span><span>Dublin</span></p>
+      <h1 data-reveal="d1">Tell us what you're trying to solve.</h1>
+      <p class="lede" data-reveal="d2">We will tell you honestly whether AI is the right answer, and what it would take to build it.</p>
+    </div>
+    <div class="page-hero__aside" data-reveal="d3"><div class="hero__facts"><div><span class="globe" aria-hidden="true"></span>Dublin, IE</div><div>Honest scoping.<br>No chatbot wrappers.</div></div></div>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <div class="wrap site-footer__grid">
+<section class="section" style="padding-top:clamp(3rem,7vw,5rem)">
+  <div class="wrap two-col" style="grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)">
+    <div data-reveal>
+      <p class="st-code" style="margin-bottom:1.4rem">ST/05.1 · Start a project</p>
+      <!-- FORMSPREE: posts to the live Astro Synapse form (https://formspree.io/f/mbjvkrja). Swap the action URL if you create a new form. -->
+      <form class="form" data-form action="https://formspree.io/f/mbjvkrja" method="POST">
+        <label>First name<input type="text" name="first_name" autocomplete="given-name" required></label>
+        <label>Last name<input type="text" name="last_name" autocomplete="family-name" required></label>
+        <label>Work email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Company<input type="text" name="company" autocomplete="organization"></label>
+        <label class="full">What do you need to build?<textarea name="message" rows="8" required></textarea></label>
+        <div class="form-foot"><button class="btn btn--primary" type="submit">Send message →</button><p class="form-status" data-form-status hidden></p></div>
+      </form>
+    </div>
+    <aside class="contact-side sticky" data-reveal="d1">
+      <div><h5>Direct contact</h5><a class="big" href="mailto:info@astrosynapse.ai">info@astrosynapse.ai</a></div>
+      <div><h5>Company</h5><p>Astro Synapse Limited<br>71 Lower Baggot Street, Dublin 2,<br>Co. Dublin, D02 P593, Ireland</p></div>
+      <div><h5>Social</h5><p><a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a> · <a href="https://www.linkedin.com/company/astro-synapse/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/AstroSynapseLab" target="_blank" rel="noopener">GitHub</a></p></div>
+      <div><h5>What happens next</h5><ol class="steps" style="margin-top:.4rem"><li>We read your brief and reply within a few business days.</li><li>A short discovery call to understand the problem.</li><li>An honest answer: AI, a deterministic build, or neither.</li></ol></div>
+    </aside>
+  </div>
+</section>
+
+
+<!-- ============ CONTACT + FOOTER ============ -->
+<footer class="site-footer" id="contact">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="public/video/deep-space.jpg">
+      <source src="public/video/deep-space.webm" type="video/webm">
+      <source src="public/video/deep-space.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap site-footer__inner">
+    <div class="cta">
       <div>
-        <h3>Astro Synapse Limited</h3>
-        <address class="address">71 Lower Baggot Street, Dublin 2, Co. Dublin, D02 P593, Ireland</address>
-        <ul class="social">
-          <li><a href="https://twitter.com/astrosynapselab" rel="noopener noreferrer">Twitter/X</a></li>
-          <li><a href="https://www.linkedin.com/company/astro-synapse/" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/AstroSynapseLab" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
+        <div class="cta__lbl"><span>ST/05 · Collaborate</span><span id="clock">IE → --:--</span></div>
+        <h2 data-reveal>Ready to build something real?</h2>
+        <p class="lede" data-reveal="d1">Tell us what you're trying to solve; we'll tell you if AI is actually the answer.</p>
       </div>
-      <nav aria-label="Footer">
-        <ul class="footer-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="use-cases.html">Use Cases</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Legal">
-        <ul class="footer-nav">
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-service.html">Terms of Service</a></li>
-        </ul>
-      </nav>
+      <div class="cta__links">
+        <a class="ulink" href="contact.html" data-reveal>Discuss your project <span class="arr">→</span></a>
+        <a class="ulink" href="products.html" data-reveal="d1">Explore the products <span class="arr">→</span></a>
+      </div>
     </div>
-    <p class="wrap copyright">© Astro Synapse Limited. Dublin, Ireland.</p>
-  </footer>
-  <script src="main.js"></script>
+    <div class="site-footer__grid">
+      <div><h5>Astro Synapse Limited</h5><address class="address">71 Lower Baggot Street<br>Dublin 2, Co. Dublin, D02 P593<br>Ireland</address></div>
+      <div><h5>Navigate</h5><div class="two">
+        <a href="index.html">Home</a><a href="use-cases.html">Use Cases</a>
+        <a href="solutions.html">Solutions</a><a href="about.html">About</a>
+        <a href="products.html">Products</a><a href="contact.html">Contact</a>
+      </div></div>
+      <div><h5>Social</h5><div class="two">
+        <a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a>
+        <a href="https://www.linkedin.com/company/astro-synapse/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/AstroSynapseLab" target="_blank" rel="noopener">GitHub</a>
+      </div></div>
+    </div>
+  </div>
+</footer>
+<div class="legal">
+  <p class="copyright">© Astro Synapse Limited. Dublin, Ireland.</p>
+  <div class="legal__row"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a></div>
+</div>
+
+</main>
+
+<script src="main.js"></script>
 </body>
 </html>

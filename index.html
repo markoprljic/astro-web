@@ -1,264 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Astro Synapse · AI Research &amp; Integrations Lab</title>
-  <meta name="description" content="We research, build, and ship AI systems: RAG pipelines, autonomous agents, and embedded engineering teams for businesses that need real infrastructure, not another chatbot wrapper.">
-  <link rel="canonical" href="https://astrosynapse.ai/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://astrosynapse.ai/">
-  <meta property="og:title" content="Astro Synapse · AI Research &amp; Integrations Lab">
-  <meta property="og:description" content="We research, build, and ship AI systems: RAG pipelines, autonomous agents, and embedded engineering teams.">
-  <meta property="og:image" content="https://astrosynapse.ai/public/cards/card-2.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add("js");</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astro Synapse · AI Research &amp; Integrations Lab</title>
+<meta name="description" content="We research, build, and ship AI systems: RAG pipelines, autonomous agents, and embedded engineering teams for businesses that need real infrastructure, not another chatbot wrapper.">
+<link rel="canonical" href="https://astrosynapse.ai/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astrosynapse.ai/">
+<meta property="og:title" content="Astro Synapse · AI Research &amp; Integrations Lab">
+<meta property="og:description" content="We research, build, and ship AI systems: RAG pipelines, autonomous agents, and embedded engineering teams.">
+<meta property="og:image" content="https://astrosynapse.ai/public/cards/card-2.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#04050a">
+<link rel="icon" href="public/logo/logo-white-icon.svg">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="fx-grain" aria-hidden="true"></div>
-  <div class="fx-vignette" aria-hidden="true"></div>
-  <canvas class="fx-orbs" data-orbs aria-hidden="true"></canvas>
-  <div class="cursor" data-cursor aria-hidden="true"></div>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="site-header">
-    <div class="site-header__inner wrap">
-      <a class="brand" href="index.html">
-        <img src="public/logo/logo-white.png" width="32" height="28" alt="">
-        <span>Astro Synapse</span>
-        <span class="brand__code">ST/00</span>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="fx-grain" aria-hidden="true"></div>
+<div class="fx-vignette" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html" aria-label="Astro Synapse home">
+      <svg class="brand__mark" viewBox="0 0 39 34" width="32" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 .5h13l12 21h-13zM6.5 11.5h14l-7 10-7 11-6.5-11zM13.5 22.5h13l6 11h-13z"/></svg>
+      <span>Astro Synapse</span><span class="brand__code">ST/00</span>
+    </a>
+    <div class="hdr-actions">
+      <a class="btn btn--nav is-solid" href="contact.html">Let's talk</a>
+      <button class="btn btn--nav" id="menuBtn" aria-expanded="false" aria-controls="menu"><span id="menuLbl">Menu</span><span class="burger" aria-hidden="true"><i></i><i></i></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Primary">
+    <a href="index.html" aria-current="page"><span class="menu__idx">01</span>Home</a>
+    <a href="solutions.html"><span class="menu__idx">02</span>Solutions</a>
+    <a href="products.html"><span class="menu__idx">03</span>Products</a>
+    <a href="use-cases.html"><span class="menu__idx">04</span>Use Cases</a>
+    <a href="about.html"><span class="menu__idx">05</span>About</a>
+    <a href="contact.html"><span class="menu__idx">06</span>Contact</a>
+  </nav>
+  <aside class="menu__side">
+    <div><h5>Business enquiry</h5><a href="contact.html">Start a project →</a></div>
+    <div><h5>Social</h5><div class="menu__row">
+      <a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a>
+      <a href="https://www.linkedin.com/company/astro-synapse/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/AstroSynapseLab" target="_blank" rel="noopener">GitHub</a>
+    </div></div>
+    <div><h5>Astro Synapse Limited</h5><p>71 Lower Baggot Street, Dublin 2, D02 P593, Ireland</p></div>
+  </aside>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="bgv" data-parallax>
+    <video autoplay muted loop playsinline preload="auto" poster="public/video/hero-space.jpg">
+      <source src="public/video/hero-space.webm" type="video/webm">
+      <source src="public/video/hero-space.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap hero__copy">
+    <p class="kicker" data-reveal><span>01. Data</span><span>02. Trust</span><span>03. Infrastructure</span></p>
+    <h1 data-reveal="d1"><span class="line">AI research and</span><span class="line">integrations lab</span></h1>
+    <div class="hero__ctas" data-reveal="d2">
+      <a class="ulink" href="contact.html">Discuss your project <span class="arr">→</span></a>
+      <a class="ulink" href="#lab">Discover the lab <span class="arr">↓</span></a>
+    </div>
+  </div>
+  <div class="wrap hero__bottom">
+    <div class="hero__hint" data-reveal="d2"><span><b>Move</b> to drift through the system.</span><span>Scroll to enter the lab.</span></div>
+    <div class="hero__card" data-reveal="d3">
+      <div class="hero__facts">
+        <div><span class="globe" aria-hidden="true"></span>Dublin, IE</div>
+        <div>AI research &amp;<br>integrations lab.</div>
+      </div>
+      <p>RAG pipelines, autonomous agents, and embedded engineering teams for businesses that need real infrastructure, not another chatbot wrapper.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about section" id="lab">
+  <div class="bgv bgv--soft">
+    <video autoplay muted loop playsinline preload="metadata" poster="public/video/deep-space.jpg">
+      <source src="public/video/deep-space.webm" type="video/webm">
+      <source src="public/video/deep-space.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap about__inner">
+    <p class="eyebrow" data-reveal>ST/01 · About</p>
+    <h2 data-reveal="d1">Astro Synapse is an independent lab that <b>researches, builds, and ships AI systems</b> for companies that need them to hold up in production.</h2>
+    <div class="rule" data-reveal></div>
+    <div class="about__cols">
+      <p class="lede" data-reveal>We design for longevity: <b>data first, trust always, built on infrastructure you control.</b></p>
+      <div data-reveal="d1">
+        <p>Our mission is to make AI feel like engineering, not magic. Systems that are observable, self-hostable, and honest about what they can and cannot do.</p>
+        <a class="ulink" href="about.html">More about us <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__lbl">Focused research.<br>Measured shipping.</div>
+  <div class="marquee__track">
+    <span>Data</span><span>Trust</span><span>Infrastructure</span><span>Agents</span>
+    <span>Data</span><span>Trust</span><span>Infrastructure</span><span>Agents</span>
+  </div>
+</div>
+
+<!-- ============ KEY FACTS ============ -->
+<section class="facts section">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="public/video/ringed-planet.jpg">
+      <source src="public/video/ringed-planet.webm" type="video/webm">
+      <source src="public/video/ringed-planet.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap facts__inner">
+    <div class="section-head">
+      <div><p class="st-code" data-reveal>✦ From idea to outcome</p><h2 data-reveal="d1">Key facts</h2></div>
+      <p class="lede" data-reveal="d2">A snapshot of what we build, how we host it, and the shape of the lab.</p>
+    </div>
+    <div class="fgrid">
+      <div class="fact" data-reveal><div class="fact__num">07</div><div class="fact__cap"><b>Capabilities</b>From custom integrations to model provisioning and team augmentation.</div></div>
+      <div class="fact" data-reveal="d1"><div class="fact__num">04</div><div class="fact__cap"><b>Products</b>Built and shipped by the lab itself, not white-labelled.</div></div>
+      <div class="fact" data-reveal="d2"><div class="fact__num">200<small>+</small></div><div class="fact__cap"><b>Languages</b>Supported by Interpress with formatting preserved.</div></div>
+      <div class="fact" data-reveal="d3"><div class="fact__num">EU</div><div class="fact__cap"><b>Sovereign inference</b>Gedor hosts LLM-as-a-Service entirely within the EU.</div></div>
+      <div class="fact fact--wide" data-reveal>
+        <div class="fact__cap"><b>Works with your stack</b>Ingestion, connectors and plugins we ship against today.</div>
+        <ul class="pills"><li class="pill">Slack</li><li class="pill">Google Drive</li><li class="pill">Email</li><li class="pill">Calendar</li><li class="pill">Trello</li><li class="pill">Discord</li><li class="pill">Jira</li><li class="pill">MCP</li><li class="pill">OpenAI-compatible API</li></ul>
+      </div>
+      <div class="fact fact--wide" data-reveal="d1">
+        <div class="fact__num is-text">Multi-LLM.<br>Self-hosted or managed.</div>
+        <div class="fact__cap">No forced dependency on a single model provider. Every system can run on your hardware or ours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section class="section" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="st-code" data-reveal>ST/02 · Capabilities</p><h2 data-reveal="d1">Do it all with<br>Astro Synapse.</h2></div>
+      <p class="lede" data-reveal="d2">Seven ways we plug into a business, from a single pipeline to a full embedded team.</p>
+    </div>
+    <ol class="service-list">
+      <li data-reveal><span class="service-list__index">01</span><h3>Custom AI Integrations.</h3><p><em>RAG pipelines</em> · document-aware search · plugin integrations · multi-LLM support</p></li>
+      <li data-reveal><span class="service-list__index">02</span><h3>Knowledge Base &amp; Company Knowledge Bank.</h3><p><em>Vector search</em> · unified company knowledge · semantic + text search · Slack, Drive &amp; email ingestion</p></li>
+      <li data-reveal><span class="service-list__index">03</span><h3>AI Systems Integration.</h3><p><em>Chat platform connectors</em> · email &amp; calendar integrations · unified MCP server · custom API interfaces</p></li>
+      <li data-reveal><span class="service-list__index">04</span><h3>Data &amp; Privacy Protection.</h3><p><em>Custom data management layer</em> · self-hosted options · full control over training data</p></li>
+      <li data-reveal><span class="service-list__index">05</span><h3>Software Automation.</h3><p><em>Scrum automation</em> · sales &amp; lead-gen · content generation · code generation · document &amp; image analysis</p></li>
+      <li data-reveal><span class="service-list__index">06</span><h3>IaaS: Model Provisioning.</h3><p><em>SLM provisioning</em> · embedding model hosting · fine-tuning &amp; training</p></li>
+      <li data-reveal><span class="service-list__index">07</span><h3>AI Team Augmentation.</h3><p><em>Embedded AI &amp; engineering specialists</em> · protocol-driven onboarding · CTO-level technical leadership</p></li>
+    </ol>
+    <div class="services__tail">
+      <span class="st-code">Different disciplines. One standard of engineering.</span>
+      <a class="ulink" href="solutions.html">View solutions <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS (paper) ============ -->
+<section class="products section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="st-code" data-reveal>ST/03 · Lab</p><h2 data-reveal="d1">Products we build<br>and ship ourselves.</h2></div>
+      <p class="lede" data-reveal="d2">Everything here runs in production today, or is close to it. Each one started as a problem we needed solved.</p>
+    </div>
+    <div class="card-grid">
+      <a class="glow-card" href="https://asai.astrosynapse.ai/" target="_blank" rel="noopener" data-reveal data-product="asai">
+        <span class="glow-card__num">001</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+        <div class="glow-card__top"><h3>ASAI</h3><span class="badge badge--access">Early access</span></div>
+        <p>Personalized, self-hosted multi-agent AI avatars.</p>
+        <ul class="pills"><li class="pill">No-code</li><li class="pill">Multi-agent</li><li class="pill">Multi-LLM</li><li class="pill">Self-hosted</li><li class="pill">Slack/Trello/Discord/Jira plugins</li></ul>
+        <span class="ulink">Try ASAI now <span class="arr">→</span></span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="use-cases.html">Use Cases</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="btn btn--nav" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <a class="glow-card" href="https://interpress.app/" target="_blank" rel="noopener" data-reveal="d1" data-product="interpress">
+        <span class="glow-card__num">002</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+        <div class="glow-card__top"><h3>Interpress</h3><span class="badge badge--live">Live</span></div>
+        <p>Instant AI-powered document translation and interpretation across 200+ languages, formatting preserved.</p>
+        <ul class="pills"><li class="pill">200+ languages</li><li class="pill">Formatting retention</li><li class="pill">Semantic search</li><li class="pill">Industry-tuned accuracy</li></ul>
+        <span class="ulink">Open Interpress <span class="arr">→</span></span>
+      </a>
+      <a class="glow-card" href="https://gedor.ai/" target="_blank" rel="noopener" data-reveal data-product="gedor">
+        <span class="glow-card__num">003</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+        <div class="glow-card__top"><h3>Gedor</h3><span class="badge badge--wait">Waitlist</span></div>
+        <p>LLM-as-a-Service, hosted entirely in the EU.</p>
+        <ul class="pills"><li class="pill">OpenAI-compatible API</li><li class="pill">Open-weight catalog</li><li class="pill">Managed vector databases</li><li class="pill">GDPR &amp; EU AI Act compliant</li></ul>
+        <span class="ulink">Join the waitlist <span class="arr">→</span></span>
+      </a>
+      <a class="glow-card" href="contact.html" data-reveal="d1" data-product="webagen">
+        <span class="glow-card__num">004</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+        <div class="glow-card__top"><h3>webAgen</h3><span class="badge badge--dev">In development</span></div>
+        <p>Agentic website generation platform.</p>
+        <ul class="pills"><li class="pill">Conversational site-building</li><li class="pill">Agent-generated CMS</li></ul>
+        <span class="ulink">Contact us <span class="arr">→</span></span>
+      </a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main id="main">
-    <section class="hero">
-      <div class="hero__stage" aria-hidden="true">
-        <div class="hero__ring"></div>
-        <div class="hero__ring hero__ring--2"></div>
-        <div class="hero__orb"></div>
+<!-- ============ EXPANDING PRODUCT PANEL ============ -->
+<div class="xp" id="xp" role="dialog" aria-modal="true" aria-labelledby="xpTitle" hidden>
+  <div class="xp__bg" data-xp-close></div>
+  <div class="xp__panel">
+    <button class="xp__close" type="button" aria-label="Close" data-xp-close>×</button>
+    <div class="xp__inner">
+      <div class="xp__left">
+        <div>
+          <div class="xp__meta wipe" style="--d:.05s"><span class="st-code" id="xpIdx">001</span><span class="badge" id="xpBadge">Live</span></div>
+          <h3 class="wipe" id="xpTitle" style="--d:.12s">ASAI</h3>
+          <p class="wipe" id="xpDesc" style="--d:.2s"></p>
+        </div>
+        <div class="xp__cta wipe" style="--d:.55s"><a class="btn btn--primary" id="xpLink" href="#">Open</a><a class="btn btn--ghost" href="contact.html">Talk to us</a></div>
       </div>
-      <div class="wrap hero__copy">
-        <p class="kicker"><span>01. Data</span><span>02. Trust</span><span>03. Infrastructure</span></p>
-        <h1>AI research and integrations lab</h1>
-        <p class="lede">We research, build, and ship AI systems: RAG pipelines, autonomous agents, and embedded engineering teams for businesses that need real infrastructure, not another chatbot wrapper.</p>
-        <a class="btn btn--primary" href="contact.html">Start a project →</a>
-        <a class="discover" href="#lab">
-          <span class="discover__arrow" aria-hidden="true">↓</span>
-          Discover
-        </a>
-      </div>
-    </section>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>Astro Synapse</span><span>Research</span><span>Integrations</span><span>Agents</span>
-        <span>Astro Synapse</span><span>Research</span><span>Integrations</span><span>Agents</span>
-        <span>Astro Synapse</span><span>Research</span><span>Integrations</span><span>Agents</span>
-        <span>Astro Synapse</span><span>Research</span><span>Integrations</span><span>Agents</span>
-      </div>
+      <div class="xp__tiles" id="xpTiles"></div>
     </div>
+  </div>
+</div>
 
-    <section class="section" id="lab">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <div>
-            <p class="st-code">ST/01 · Capabilities</p>
-            <h2>Do it all with Astro Synapse</h2>
-          </div>
-        </div>
-        <ol class="service-list">
-          <li data-reveal>
-            <span class="service-list__index" aria-hidden="true">01</span>
-            <div>
-              <h3>Custom AI Integrations.</h3>
-              <p>RAG pipelines · document-aware search · plugin integrations · multi-LLM support</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="service-list__index" aria-hidden="true">02</span>
-            <div>
-              <h3>Knowledge Base &amp; Company Knowledge Bank.</h3>
-              <p>Vector search · unified company knowledge · semantic + text search · Slack, Drive &amp; email ingestion</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="service-list__index" aria-hidden="true">03</span>
-            <div>
-              <h3>AI Systems Integration.</h3>
-              <p>Chat platform connectors · email &amp; calendar integrations · unified MCP server · custom API interfaces</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="service-list__index" aria-hidden="true">04</span>
-            <div>
-              <h3>Data &amp; Privacy Protection.</h3>
-              <p>Custom data management layer · self-hosted options · full control over training data</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="service-list__index" aria-hidden="true">05</span>
-            <div>
-              <h3>Software Automation.</h3>
-              <p>Scrum automation · sales &amp; lead-gen · content generation · code generation · document &amp; image analysis</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="service-list__index" aria-hidden="true">06</span>
-            <div>
-              <h3>IaaS: Model Provisioning.</h3>
-              <p>SLM provisioning · embedding model hosting · fine-tuning &amp; training</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="service-list__index" aria-hidden="true">07</span>
-            <div>
-              <h3>AI Team Augmentation.</h3>
-              <p>Embedded AI &amp; engineering specialists · protocol-driven onboarding · CTO-level technical leadership</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
+<!-- ============ SOVEREIGNTY ============ -->
+<section class="sov section">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="public/video/hero-planet.jpg" style="transform:scale(1.06) scaleX(-1)">
+      <source src="public/video/hero-planet.webm" type="video/webm">
+      <source src="public/video/hero-planet.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap sov__inner">
+    <div><p class="eyebrow" data-reveal>ST/04 · Sovereignty</p><h2 data-reveal="d1">Your data.<br>Your infra.<br>Your rules.</h2></div>
+    <div class="sov__r">
+      <p data-reveal="d1">Every system we build can run <b>self-hosted or managed</b>, giving you full vertical control over your data, software, hardware, and training pipeline. No forced dependency on a single model provider. For EU-based operations, Gedor extends that control to fully sovereign, EU-hosted inference.</p>
+      <ul class="pills" data-reveal="d2"><li class="pill">Self-hosted</li><li class="pill">Managed</li><li class="pill">Multi-LLM</li><li class="pill">EU-hosted</li><li class="pill">GDPR</li><li class="pill">EU AI Act</li></ul>
+      <a class="ulink" href="use-cases.html" data-reveal="d3">See use cases <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
 
-    <section class="section section--void" id="products">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <div>
-            <p class="eyebrow">Products</p>
-            <h2>Products we build and ship ourselves.</h2>
-          </div>
-          <p class="st-code">ST/02 · Lab</p>
-        </div>
-        <div class="card-grid">
-          <a class="glow-card glow-card--2" href="https://asai.astrosynapse.ai/" data-tilt data-reveal>
-            <span class="glow-card__num">001</span>
-            <div class="glow-card__top">
-              <h3>ASAI</h3>
-              <span class="badge badge--access">Early Access</span>
-            </div>
-            <p>Personalized, self-hosted multi-agent AI avatars.</p>
-            <ul class="pills">
-              <li class="pill">no-code</li>
-              <li class="pill">multi-agent</li>
-              <li class="pill">multi-LLM</li>
-              <li class="pill">self-hosted</li>
-              <li class="pill">Slack/Trello/Discord/Jira plugins</li>
-            </ul>
-            <span class="glow-card__cta">Try ASAI now →</span>
-          </a>
-          <a class="glow-card glow-card--1" href="https://interpress.app/" data-tilt data-reveal>
-            <span class="glow-card__num">002</span>
-            <div class="glow-card__top">
-              <h3>Interpress</h3>
-              <span class="badge badge--live">Live</span>
-            </div>
-            <p>Instant AI-powered document translation and interpretation across 200+ languages, formatting preserved.</p>
-            <ul class="pills">
-              <li class="pill">200+ languages</li>
-              <li class="pill">formatting retention</li>
-              <li class="pill">semantic search</li>
-              <li class="pill">industry-tuned accuracy</li>
-            </ul>
-            <span class="glow-card__cta">Open Interpress →</span>
-          </a>
-          <a class="glow-card glow-card--3" href="https://gedor.ai/" data-tilt data-reveal>
-            <span class="glow-card__num">003</span>
-            <div class="glow-card__top">
-              <h3>Gedor</h3>
-              <span class="badge badge--wait">Waitlist</span>
-            </div>
-            <p>LLM-as-a-Service, hosted entirely in the EU.</p>
-            <ul class="pills">
-              <li class="pill">OpenAI-compatible API</li>
-              <li class="pill">open-weight catalog</li>
-              <li class="pill">managed vector databases</li>
-              <li class="pill">GDPR &amp; EU AI Act compliant</li>
-            </ul>
-            <span class="glow-card__cta">Join the waitlist →</span>
-          </a>
-          <a class="glow-card glow-card--mesh" href="contact.html" data-tilt data-reveal>
-            <span class="glow-card__num">004</span>
-            <div class="glow-card__top">
-              <h3>webAgen</h3>
-              <span class="badge badge--dev">In Development</span>
-            </div>
-            <p>Agentic website generation platform.</p>
-            <ul class="pills">
-              <li class="pill">conversational site-building</li>
-              <li class="pill">agent-generated CMS</li>
-            </ul>
-            <span class="glow-card__cta">Contact us →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap" data-reveal>
-        <p class="st-code">ST/03 · Sovereignty</p>
-        <h2>Your data. Your infrastructure. Your rules.</h2>
-        <p class="lede">Every system we build can run self-hosted or managed, giving you full vertical control over your data, software, hardware, and training pipeline. No forced dependency on a single model provider. For EU-based operations, Gedor extends that control to fully sovereign, EU-hosted inference.</p>
-      </div>
-    </section>
-
-    <section class="section section--void">
-      <div class="wrap" data-reveal="slow">
-        <p class="st-code">ST/04 · Collaborate</p>
-        <p class="display">Build <span>with us.</span></p>
-        <p class="lede">Tell us what you're trying to solve; we'll tell you if AI is actually the answer.</p>
-        <a class="btn btn--primary" href="contact.html">Contact us →</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap site-footer__grid">
+<!-- ============ CONTACT + FOOTER ============ -->
+<footer class="site-footer" id="contact">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="public/video/deep-space.jpg">
+      <source src="public/video/deep-space.webm" type="video/webm">
+      <source src="public/video/deep-space.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap site-footer__inner">
+    <div class="cta">
       <div>
-        <h3>Astro Synapse Limited</h3>
-        <address class="address">71 Lower Baggot Street, Dublin 2, Co. Dublin, D02 P593, Ireland</address>
-        <ul class="social">
-          <li><a href="https://twitter.com/astrosynapselab" rel="noopener noreferrer">Twitter/X</a></li>
-          <li><a href="https://www.linkedin.com/company/astro-synapse/" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/AstroSynapseLab" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
+        <div class="cta__lbl"><span>ST/05 · Collaborate</span><span id="clock">IE → --:--</span></div>
+        <h2 data-reveal>Ready to build something real?</h2>
+        <p class="lede" data-reveal="d1">Tell us what you're trying to solve; we'll tell you if AI is actually the answer.</p>
       </div>
-      <nav aria-label="Footer">
-        <ul class="footer-nav">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="use-cases.html">Use Cases</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Legal">
-        <ul class="footer-nav">
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-service.html">Terms of Service</a></li>
-        </ul>
-      </nav>
+      <div class="cta__links">
+        <a class="ulink" href="contact.html" data-reveal>Discuss your project <span class="arr">→</span></a>
+        <a class="ulink" href="products.html" data-reveal="d1">Explore the products <span class="arr">→</span></a>
+      </div>
     </div>
-    <p class="wrap copyright">© Astro Synapse Limited. Dublin, Ireland.</p>
-  </footer>
-  <script src="main.js"></script>
+    <div class="site-footer__grid">
+      <div><h5>Astro Synapse Limited</h5><address class="address">71 Lower Baggot Street<br>Dublin 2, Co. Dublin, D02 P593<br>Ireland</address></div>
+      <div><h5>Navigate</h5><div class="two">
+        <a href="index.html">Home</a><a href="use-cases.html">Use Cases</a>
+        <a href="solutions.html">Solutions</a><a href="about.html">About</a>
+        <a href="products.html">Products</a><a href="contact.html">Contact</a>
+      </div></div>
+      <div><h5>Social</h5><div class="two">
+        <a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a>
+        <a href="https://www.linkedin.com/company/astro-synapse/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/AstroSynapseLab" target="_blank" rel="noopener">GitHub</a>
+      </div></div>
+    </div>
+  </div>
+</footer>
+<div class="legal">
+  <p class="copyright">© Astro Synapse Limited. Dublin, Ireland.</p>
+  <div class="legal__row"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a></div>
+</div>
+
+</main>
+
+<script src="main.js"></script>
 </body>
 </html>
