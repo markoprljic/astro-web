@@ -306,7 +306,7 @@ h3 {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 60;
+  z-index: 85;
   height: var(--header);
   border-bottom: 1px solid transparent;
   transition: background-color 400ms var(--ease), border-color 400ms var(--ease), backdrop-filter 400ms var(--ease);
