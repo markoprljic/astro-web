@@ -43,8 +43,8 @@
 <div class="menu" id="menu" aria-hidden="true">
   <nav aria-label="Primary">
     <a href="index.html" aria-current="page"><span class="menu__idx">01</span>Home</a>
-    <a href="solutions.html"><span class="menu__idx">02</span>Solutions</a>
-    <a href="products.html"><span class="menu__idx">03</span>Products</a>
+    <a href="research.html"><span class="menu__idx">02</span>Research</a>
+    <a href="solutions.html"><span class="menu__idx">03</span>Solutions</a>
     <a href="use-cases.html"><span class="menu__idx">04</span>Use Cases</a>
     <a href="about.html"><span class="menu__idx">05</span>About</a>
     <a href="contact.html"><span class="menu__idx">06</span>Contact</a>
@@ -136,7 +136,7 @@
     </div>
     <div class="fgrid">
       <div class="fact" data-reveal><div class="fact__num">07</div><div class="fact__cap"><b>Capabilities</b>From custom integrations to model provisioning and team augmentation.</div></div>
-      <div class="fact" data-reveal="d1"><div class="fact__num">04</div><div class="fact__cap"><b>Products</b>Built and shipped by the lab itself, not white-labelled.</div></div>
+      <div class="fact" data-reveal="d1"><div class="fact__num">05</div><div class="fact__cap"><b>Research projects</b>Built and shipped by the lab itself, from trams to translation.</div></div>
       <div class="fact" data-reveal="d2"><div class="fact__num">200<small>+</small></div><div class="fact__cap"><b>Languages</b>Supported by Interpress with formatting preserved.</div></div>
       <div class="fact" data-reveal="d3"><div class="fact__num">EU</div><div class="fact__cap"><b>Sovereign inference</b>Gedor hosts LLM-as-a-Service entirely within the EU.</div></div>
       <div class="fact fact--wide" data-reveal>
@@ -174,41 +174,50 @@
   </div>
 </section>
 
-<!-- ============ PRODUCTS (paper) ============ -->
-<section class="products section">
+<!-- ============ RESEARCH ============ -->
+<section class="products section" id="research">
   <div class="wrap">
     <div class="section-head">
-      <div><p class="st-code" data-reveal>ST/03 · Lab</p><h2 data-reveal="d1">Products we build<br>and ship ourselves.</h2></div>
-      <p class="lede" data-reveal="d2">Everything here runs in production today, or is close to it. Each one started as a problem we needed solved.</p>
+      <div><p class="st-code" data-reveal>ST/03 · Research</p><h2 data-reveal="d1">Research we build<br>and ship ourselves.</h2></div>
+      <p class="lede" data-reveal="d2">Applied research in the open: from an AI that drives trams to the products that came out of our own work. Each one started as a problem we needed solved.</p>
     </div>
+      <a class="research-feature" href="research/robo-zet.html" data-reveal style="--img:url('https://struki84.github.io/robo-zet-web/assets/vision-system.png')">
+        <div class="research-feature__copy">
+          <div class="xp__meta"><span class="st-code">001</span><span class="badge badge--access">Phase 1 · Proof of concept</span></div>
+          <h3>RoboZET: AI that drives trams.</h3>
+          <p>An AI system that can drive a tram, starting on Zagreb's network. The first version already reads the street ahead and decides how the tram should respond.</p>
+          <ul class="pills"><li class="pill">Autonomous mobility</li><li class="pill">Computer vision</li><li class="pill">YOLO11 · ByteTrack</li><li class="pill">Jev by TypeSafe AI</li></ul>
+          <span class="ulink">Read the project <span class="arr">→</span></span>
+        </div>
+      </a>
     <div class="card-grid">
-      <a class="glow-card" href="https://asai.astrosynapse.ai/" target="_blank" rel="noopener" data-reveal data-product="asai">
-        <span class="glow-card__num">001</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+      <a class="glow-card" href="research/asai.html" data-reveal data-product="asai">
+        <span class="glow-card__num">005</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
         <div class="glow-card__top"><h3>ASAI</h3><span class="badge badge--access">Early access</span></div>
         <p>Personalized, self-hosted multi-agent AI avatars.</p>
         <ul class="pills"><li class="pill">No-code</li><li class="pill">Multi-agent</li><li class="pill">Multi-LLM</li><li class="pill">Self-hosted</li><li class="pill">Slack/Trello/Discord/Jira plugins</li></ul>
-        <span class="ulink">Try ASAI now <span class="arr">→</span></span>
+        <span class="ulink" data-ext="https://asai.astrosynapse.ai/">Try ASAI now <span class="arr">→</span></span>
       </a>
-      <a class="glow-card" href="https://interpress.app/" target="_blank" rel="noopener" data-reveal="d1" data-product="interpress">
-        <span class="glow-card__num">002</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+      <a class="glow-card" href="research/interpress.html" data-reveal="d1" data-product="interpress">
+        <span class="glow-card__num">005</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
         <div class="glow-card__top"><h3>Interpress</h3><span class="badge badge--live">Live</span></div>
         <p>Instant AI-powered document translation and interpretation across 200+ languages, formatting preserved.</p>
         <ul class="pills"><li class="pill">200+ languages</li><li class="pill">Formatting retention</li><li class="pill">Semantic search</li><li class="pill">Industry-tuned accuracy</li></ul>
-        <span class="ulink">Open Interpress <span class="arr">→</span></span>
+        <span class="ulink" data-ext="https://interpress.app/">Open Interpress <span class="arr">→</span></span>
       </a>
-      <a class="glow-card" href="https://gedor.ai/" target="_blank" rel="noopener" data-reveal data-product="gedor">
-        <span class="glow-card__num">003</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+      <a class="glow-card" href="research/gedor.html" data-reveal data-product="gedor">
+        <span class="glow-card__num">005</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
         <div class="glow-card__top"><h3>Gedor</h3><span class="badge badge--wait">Waitlist</span></div>
         <p>LLM-as-a-Service, hosted entirely in the EU.</p>
         <ul class="pills"><li class="pill">OpenAI-compatible API</li><li class="pill">Open-weight catalog</li><li class="pill">Managed vector databases</li><li class="pill">GDPR &amp; EU AI Act compliant</li></ul>
-        <span class="ulink">Join the waitlist <span class="arr">→</span></span>
+        <span class="ulink" data-ext="https://gedor.ai/">Join the waitlist <span class="arr">→</span></span>
       </a>
-      <a class="glow-card" href="contact.html" data-reveal="d1" data-product="webagen">
-        <span class="glow-card__num">004</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
+      <a class="glow-card" href="research/webagen.html" data-reveal="d1" data-product="webagen">
+        <span class="glow-card__num">005</span><span class="glow-card__expand" aria-hidden="true">⤢</span>
         <div class="glow-card__top"><h3>webAgen</h3><span class="badge badge--dev">In development</span></div>
         <p>Agentic website generation platform.</p>
         <ul class="pills"><li class="pill">Conversational site-building</li><li class="pill">Agent-generated CMS</li></ul>
-        <span class="ulink">Contact us <span class="arr">→</span></span>
+        <span class="ulink" data-ext="contact.html">Contact us <span class="arr">→</span></span>
       </a>
     </div>
   </div>
@@ -226,7 +235,7 @@
           <h3 class="wipe" id="xpTitle" style="--d:.12s">ASAI</h3>
           <p class="wipe" id="xpDesc" style="--d:.2s"></p>
         </div>
-        <div class="xp__cta wipe" style="--d:.55s"><a class="btn btn--primary" id="xpLink" href="#">Open</a><a class="btn btn--ghost" href="contact.html">Talk to us</a></div>
+        <div class="xp__cta wipe" style="--d:.55s"><a class="btn btn--primary" id="xpLink" href="#">Open</a><a class="btn btn--ghost" id="xpPage" href="#">Full project →</a></div>
       </div>
       <div class="xp__tiles" id="xpTiles"></div>
     </div>
@@ -268,15 +277,15 @@
       </div>
       <div class="cta__links">
         <a class="ulink" href="contact.html" data-reveal>Discuss your project <span class="arr">→</span></a>
-        <a class="ulink" href="products.html" data-reveal="d1">Explore the products <span class="arr">→</span></a>
+        <a class="ulink" href="research.html" data-reveal="d1">Explore the research <span class="arr">→</span></a>
       </div>
     </div>
     <div class="site-footer__grid">
       <div><h5>Astro Synapse Limited</h5><address class="address">71 Lower Baggot Street<br>Dublin 2, Co. Dublin, D02 P593<br>Ireland</address></div>
       <div><h5>Navigate</h5><div class="two">
         <a href="index.html">Home</a><a href="use-cases.html">Use Cases</a>
-        <a href="solutions.html">Solutions</a><a href="about.html">About</a>
-        <a href="products.html">Products</a><a href="contact.html">Contact</a>
+        <a href="research.html">Research</a><a href="about.html">About</a>
+        <a href="solutions.html">Solutions</a><a href="contact.html">Contact</a>
       </div></div>
       <div><h5>Social</h5><div class="two">
         <a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a>

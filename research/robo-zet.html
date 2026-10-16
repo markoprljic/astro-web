@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoboZET: AI that drives trams · Astro Synapse</title>
+<meta name="description" content="RoboZET is building an AI system that can drive a tram, starting on Zagreb's network. The first version already reads the street ahead and decides how the tram should respond.">
+<link rel="canonical" href="https://astrosynapse.ai/research/robo-zet.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astrosynapse.ai/research/robo-zet.html">
+<meta property="og:title" content="RoboZET: AI that drives trams · Astro Synapse">
+<meta property="og:description" content="RoboZET is building an AI system that can drive a tram, starting on Zagreb's network. The first version already reads the street ahead and decides how the tram should respond.">
+<meta property="og:image" content="https://struki84.github.io/robo-zet-web/assets/vision-system.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#04050a">
+<link rel="icon" href="../public/logo/logo-white-icon.svg">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="fx-grain" aria-hidden="true"></div>
+<div class="fx-vignette" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="../index.html" aria-label="Astro Synapse home">
+      <svg class="brand__mark" viewBox="0 0 39 34" width="32" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 .5h13l12 21h-13zM6.5 11.5h14l-7 10-7 11-6.5-11zM13.5 22.5h13l6 11h-13z"/></svg>
+      <span>Astro Synapse</span><span class="brand__code">RS/01</span>
+    </a>
+    <div class="hdr-actions">
+      <a class="btn btn--nav is-solid" href="../contact.html">Let's talk</a>
+      <button class="btn btn--nav" id="menuBtn" aria-expanded="false" aria-controls="menu"><span id="menuLbl">Menu</span><span class="burger" aria-hidden="true"><i></i><i></i></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Primary">
+    <a href="../index.html"><span class="menu__idx">01</span>Home</a>
+    <a href="../research.html" aria-current="page"><span class="menu__idx">02</span>Research</a>
+    <a href="../solutions.html"><span class="menu__idx">03</span>Solutions</a>
+    <a href="../use-cases.html"><span class="menu__idx">04</span>Use Cases</a>
+    <a href="../about.html"><span class="menu__idx">05</span>About</a>
+    <a href="../contact.html"><span class="menu__idx">06</span>Contact</a>
+  </nav>
+  <aside class="menu__side">
+    <div><h5>Business enquiry</h5><a href="../contact.html">Start a project →</a></div>
+    <div><h5>Social</h5><div class="menu__row">
+      <a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a>
+      <a href="https://www.linkedin.com/company/astro-synapse/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/AstroSynapseLab" target="_blank" rel="noopener">GitHub</a>
+    </div></div>
+    <div><h5>Astro Synapse Limited</h5><p>71 Lower Baggot Street, Dublin 2, D02 P593, Ireland</p></div>
+  </aside>
+</div>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="../public/video/hero-planet.jpg">
+      <source src="../public/video/hero-planet.webm" type="video/webm">
+      <source src="../public/video/hero-planet.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap page-hero__grid">
+    <div>
+      <p class="kicker" data-reveal><span>Research 01</span><span>Autonomous mobility</span></p>
+      <h1 data-reveal="d1">AI that drives trams.</h1>
+      <p class="lede" data-reveal="d2">RoboZET is building an AI system that can drive a tram, starting on Zagreb's network. The first version already reads the street ahead and decides how the tram should respond.</p>
+    </div>
+    <div class="page-hero__aside" data-reveal="d3"><div class="hero__facts"><div><span class="globe" aria-hidden="true"></span>Zagreb, HR</div><div>3 phases to a<br>driverless line.</div></div>
+<div class="cta-row" style="margin-top:.8rem"><a class="btn btn--primary" href="https://struki84.github.io/robo-zet-web/assets/RoboZET.pdf" target="_blank" rel="noopener">Project paper (PDF)</a></div>
+<p style="color:var(--cream-dim);font-size:.95rem;margin-top:.4rem">Jump to: <a href="#how">How it works</a> · <a href="#phase-1">Phase 1</a> · <a href="#roadmap">Roadmap</a> · <a href="#contact">Contact</a></p></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:clamp(2.5rem,6vw,4.5rem)">
+  <div class="wrap">
+<figure class="player" data-reveal>
+  <div class="player__frame"><video controls preload="metadata" playsinline><source src="https://struki84.github.io/robo-zet-web/assets/demo-90s.mp4" type="video/mp4">Your browser can't play this video. <a href="https://struki84.github.io/robo-zet-web/assets/demo-90s.mp4">Download it</a>.</video></div>
+  <figcaption><span class="st-code">Line 2 · cab view · AI overlay</span><span>Ninety seconds of ZET line 2 as the AI sees it: detections, the track corridor, and the driving decision with confidence bars.</span></figcaption>
+</figure>
+  </div>
+</section>
+
+<section class="facts section" id="why">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="../public/video/ringed-planet.jpg">
+      <source src="../public/video/ringed-planet.webm" type="video/webm">
+      <source src="../public/video/ringed-planet.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap facts__inner">
+    <div class="two-col">
+      <div class="sticky" data-reveal>
+        <p class="st-code">01 · Why trams</p>
+        <h2 style="margin-top:.6rem">Why start with trams</h2>
+      </div>
+      <div class="prose" data-reveal="d1">
+        <p>A tram follows fixed rails, so it never steers. The only decisions are when to accelerate, coast, brake or stop.</p>
+        <p>That turns a hard open-world problem into a narrower one: understand the scene ahead and control speed safely. Operators also need to modernise. ZET reported that only 57.47% of its trams were technically available in 2023, and it is now replacing its oldest Tatra trams.</p>
+      </div>
+    </div>
+    <div class="fgrid" style="grid-template-columns:repeat(3,1fr);margin-top:2.5rem">
+      <div class="fact" data-reveal><div class="fact__num is-text">Fixed, known routes.</div><div class="fact__cap">Every line can be mapped and recorded in advance, stop by stop.</div></div>
+      <div class="fact" data-reveal="d1"><div class="fact__num is-text">One control axis.</div><div class="fact__cap">Speed only: no lane changes, parking or steering.</div></div>
+      <div class="fact" data-reveal="d2"><div class="fact__num is-text">Infrastructure in place.</div><div class="fact__cap">Zagreb runs 15 day lines on about 116 km of metre-gauge track, and hundreds of European cities have similar networks.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div><p class="st-code" data-reveal>02 · Pipeline</p><h2 data-reveal="d1">How it works</h2></div><p class="lede" data-reveal="d2">Driving is split into four stages, so each one can be tested and replaced on its own.</p></div>
+    <ol class="service-list">
+      <li data-reveal><span class="service-list__index">01</span><h3>See.</h3><p>Cameras at the front capture the track and street ahead.</p></li>
+      <li data-reveal><span class="service-list__index">02</span><h3>Understand.</h3><p>A local vision system finds people, cars, bikes and lights, and works out what is on or heading toward the rails.</p></li>
+      <li data-reveal><span class="service-list__index">03</span><h3>Decide.</h3><p>The scene goes to <em>Jev by TypeSafe AI</em>, which returns a driving action with a confidence for each option.</p></li>
+      <li data-reveal><span class="service-list__index">04</span><h3>Act.</h3><p>A controller turns the action into motor and brake commands. A hardware emergency stop always overrides the AI.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="phase-1" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div><p class="st-code" data-reveal>03 · Phase 1</p><h2 data-reveal="d1">Phase 1: proof of concept</h2></div><p class="lede" data-reveal="d2">Put the AI on real tram hardware, then turn that hardware into a scout robot that works the network every day. Estimated at about 12 months.</p></div>
+
+    <article class="stage">
+      <div class="stage__head" data-reveal><span class="badge badge--live">Working today</span><h3>The AI vision system</h3></div>
+      <div class="sol__grid">
+        <div data-reveal>
+          <p class="lede">The first version runs on recorded cab footage of ZET line 2, at about five frames per second.</p>
+          <ul class="plain">
+            <li>YOLO11 and ByteTrack detect and follow people, vehicles and traffic lights.</li>
+            <li>A calibrated track corridor shows what is on the rails or moving toward them.</li>
+            <li>Distance, the tram's own speed and signal colour are estimated from the video.</li>
+            <li>Jev chooses the action: speed up, keep steady, ease off, brake or emergency stop.</li>
+          </ul>
+        </div>
+        <figure class="figure" data-reveal="d1">
+          <img src="https://struki84.github.io/robo-zet-web/assets/vision-system.png" alt="The vision system on ZET footage: detections, the tram's path highlighted in yellow, a scene summary and Jev's decision with confidence bars" loading="lazy">
+          <figcaption><span class="st-code">Vision system, v1</span><span>Line 2 footage with detections, the tram's path, and Jev's decision on the right.</span></figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="stage__head" data-reveal><span class="badge badge--wait">Next</span><h3>The bogie</h3></div>
+      <div class="sol__grid">
+        <div data-reveal>
+          <p class="lede">The platform is a single motor bogie from a retired Tatra T4 tram, the type ZET runs as TMK 401 and is now replacing.</p>
+          <ul class="plain">
+            <li>Metre gauge, with the same wheels and brakes that run on ZET lines today.</li>
+            <li>Two original 40 kW DC traction motors.</li>
+            <li>A 72–96 V LiFePO4 battery instead of overhead power, for slow, safe test speeds.</li>
+            <li>An onboard GPU computer, cameras and depth sensors on a frame above the bogie.</li>
+            <li>A physical emergency stop that cuts power regardless of the AI.</li>
+          </ul>
+          <p style="color:var(--cream-dim);margin-top:1rem">First runs take place on a closed test track.</p>
+        </div>
+        <div class="gallery" data-reveal="d1">
+          <figure class="figure"><img src="https://struki84.github.io/robo-zet-web/assets/tatra-tram.webp" alt="A red and white Tatra T3-family tram with its two bogies visible" loading="lazy"><figcaption><span>A Tatra T3-family tram. ZET's T4 uses the same bogie design.</span></figcaption></figure>
+          <figure class="figure"><img src="https://struki84.github.io/robo-zet-web/assets/bogie-render.jpg" alt="3D model of the Tatra T3/T4 metre-gauge bogie" loading="lazy"><figcaption><span class="st-code">Bogie, 1000 mm</span></figcaption></figure>
+          <figure class="figure"><img src="https://struki84.github.io/robo-zet-web/assets/bogie-photo.jpg" alt="A refurbished tram motor bogie in a workshop" loading="lazy"><figcaption><span>A refurbished motor bogie.</span></figcaption></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="stage">
+      <div class="stage__head" data-reveal><span class="badge badge--dev">Then</span><h3>The scout robot</h3></div>
+      <div class="sol__grid">
+        <div data-reveal>
+          <p class="lede">Once the bogie drives reliably under AI control, it becomes a self-propelled scout. Its first job is to record a complete line to train the driving AI. After that it keeps working every day, giving the operator live, updated scans of every line.</p>
+          <p style="color:var(--cream-dim);margin-top:1rem">Runs on live lines would start outside service hours, with the operator's approval.</p>
+        </div>
+        <div data-reveal="d1">
+          <dl class="facts-dl">
+            <div><dt>Traffic jams</dt><dd>Cars on the rails, blocked junctions, stalled vehicles.</dd></div>
+            <div><dt>Accidents</dt><dd>Collisions and obstructions on or near the track.</dd></div>
+            <div><dt>Roadworks</dt><dd>New construction zones, temporary signals, track damage.</dd></div>
+            <div><dt>Changes</dt><dd>Anything that differs from the last scan, flagged for the operator.</dd></div>
+          </dl>
+          <div class="scout" aria-hidden="true"><span class="scout__dot"></span><span class="scout__dot"></span><span class="scout__dot is-alert"></span><span class="scout__lbl">Track blocked · operator alert</span></div>
+          <p class="st-code" style="margin-top:.8rem">Live scans of every line, every day.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="facts section" id="roadmap">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="../public/video/deep-space.jpg">
+      <source src="../public/video/deep-space.webm" type="video/webm">
+      <source src="../public/video/deep-space.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap facts__inner">
+    <div class="section-head"><div><p class="st-code" data-reveal>04 · Roadmap</p><h2 data-reveal="d1">The route ahead</h2></div><p class="lede" data-reveal="d2">Three phases to a driverless line, then the network.</p></div>
+    <div class="fgrid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="fact" data-reveal><div><div class="fact__num">01</div><div class="fact__cap" style="margin-top:.6rem"><b>Phase 1 · Proof of concept, now</b></div></div><div class="fact__cap">AI-driven bogie on a closed track, then the scout robot on a real line.</div></div>
+      <div class="fact" data-reveal="d1"><div><div class="fact__num">02</div><div class="fact__cap" style="margin-top:.6rem"><b>Phase 2 · Prototype</b></div></div><div class="fact__cap">The AI in a real, road-legal tram: first alongside a driver, then driving under supervision.</div></div>
+      <div class="fact" data-reveal="d2"><div><div class="fact__num">03</div><div class="fact__cap" style="margin-top:.6rem"><b>Phase 3 · MVP</b></div></div><div class="fact__cap">A traffic-ready autonomous system in beta on one line, with a safety driver on board.</div></div>
+      <div class="fact" data-reveal="d3"><div><div class="fact__num">04</div><div class="fact__cap" style="margin-top:.6rem"><b>Scale-up · Network and beyond</b></div></div><div class="fact__cap">All Zagreb lines, other Croatian cities, then tram operators across Europe, with scouts monitoring every line daily.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ride" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div><p class="st-code" data-reveal>05 · Full ride</p><h2 data-reveal="d1">A full ride, as the AI sees it</h2></div><p class="lede" data-reveal="d2">Ten minutes on line 2, with every detection and decision on screen.</p></div>
+<figure class="player" data-reveal>
+  <div class="player__frame"><video controls preload="metadata" playsinline><source src="https://struki84.github.io/robo-zet-web/assets/full-ride.mp4" type="video/mp4">Your browser can't play this video. <a href="https://struki84.github.io/robo-zet-web/assets/full-ride.mp4">Download it</a>.</video></div>
+  <figcaption><span class="st-code">Full ride · 10 min</span><span>Uncut line 2 run with the complete detection and decision overlay.</span></figcaption>
+</figure>
+  </div>
+</section>
+
+<section class="section" id="funding" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><div><p class="st-code" data-reveal>06 · Funding</p><h2 data-reveal="d1">Funding Phase 1</h2></div><p class="lede" data-reveal="d2">Phase 1 can be funded from one source or a combination.</p></div>
+    <div class="tiers">
+      <div class="tier" data-reveal><span class="i">Grants</span><h3>Public programmes.</h3><p>EU and Croatian innovation and smart-mobility programmes for applied AI and transport.</p></div>
+      <div class="tier" data-reveal="d1"><span class="i">Partnerships</span><h3>Co-development.</h3><p>Co-development with the operator, the city, research institutions or rail industry, through funding, hardware, track access or expertise.</p></div>
+      <div class="tier" data-reveal="d2"><span class="i">Venture capital</span><h3>Equity.</h3><p>Equity from investors in autonomous mobility and applied AI, backing a path from a working proof of concept to a product for tram operators across Europe.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="closing" id="contact">
+  <div class="wrap two-col">
+    <div data-reveal>
+      <p class="st-code">07 · Talk to us</p>
+      <h2 style="margin-top:.6rem">Talk to us</h2>
+      <p class="lede">RoboZET is developed by Astro Synapse, a Croatian company building applied AI systems.</p>
+    </div>
+    <div data-reveal="d1">
+      <a class="big" href="mailto:info@astrosynapse.ai" style="font-family:var(--font-display);font-weight:600;letter-spacing:-.03em;font-size:clamp(1.3rem,2.4vw,2rem);color:var(--cream)">info@astrosynapse.ai</a>
+      <div class="cta-row"><a class="btn btn--primary" href="https://struki84.github.io/robo-zet-web/assets/RoboZET.pdf" target="_blank" rel="noopener">Download the project paper (PDF)</a><a class="btn btn--ghost" href="../research.html">← All research</a></div>
+      <p class="st-code" style="margin-top:2rem;color:var(--muted)">Decision model: Jev by TypeSafe AI. Demo footage used for research purposes.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ CONTACT + FOOTER ============ -->
+<footer class="site-footer" id="contact">
+  <div class="bgv">
+    <video autoplay muted loop playsinline preload="metadata" poster="../public/video/deep-space.jpg">
+      <source src="../public/video/deep-space.webm" type="video/webm">
+      <source src="../public/video/deep-space.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap site-footer__inner">
+    <div class="cta">
+      <div>
+        <div class="cta__lbl"><span>ST/05 · Collaborate</span><span id="clock">IE → --:--</span></div>
+        <h2 data-reveal>Ready to build something real?</h2>
+        <p class="lede" data-reveal="d1">Tell us what you're trying to solve; we'll tell you if AI is actually the answer.</p>
+      </div>
+      <div class="cta__links">
+        <a class="ulink" href="../contact.html" data-reveal>Discuss your project <span class="arr">→</span></a>
+        <a class="ulink" href="../research.html" data-reveal="d1">Explore the research <span class="arr">→</span></a>
+      </div>
+    </div>
+    <div class="site-footer__grid">
+      <div><h5>Astro Synapse Limited</h5><address class="address">71 Lower Baggot Street<br>Dublin 2, Co. Dublin, D02 P593<br>Ireland</address></div>
+      <div><h5>Navigate</h5><div class="two">
+        <a href="../index.html">Home</a><a href="../use-cases.html">Use Cases</a>
+        <a href="../research.html">Research</a><a href="../about.html">About</a>
+        <a href="../solutions.html">Solutions</a><a href="../contact.html">Contact</a>
+      </div></div>
+      <div><h5>Social</h5><div class="two">
+        <a href="https://twitter.com/astrosynapselab" target="_blank" rel="noopener">Twitter/X</a>
+        <a href="https://www.linkedin.com/company/astro-synapse/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/AstroSynapseLab" target="_blank" rel="noopener">GitHub</a>
+      </div></div>
+    </div>
+  </div>
+</footer>
+<div class="legal">
+  <p class="copyright">© Astro Synapse Limited. Dublin, Ireland.</p>
+  <div class="legal__row"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-service.html">Terms of Service</a></div>
+</div>
+
+</main>
+
+<script src="../main.js"></script>
+</body>
+</html>

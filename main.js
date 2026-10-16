@@ -34,16 +34,16 @@
 
   /* ---------------- expanding product panel ---------------- */
   var PRODUCTS={
-    asai:{idx:'001',badge:'Early access',cls:'badge--access',title:'ASAI',desc:'Personalized, self-hosted multi-agent AI avatars. Build an avatar once, run it on your own infrastructure, and let it work across the tools your team already uses.',link:'https://asai.astrosynapse.ai/',linkLbl:'Try ASAI now',ext:true,
+    asai:{page:'research/asai.html',idx:'001',badge:'Early access',cls:'badge--access',title:'ASAI',desc:'Personalized, self-hosted multi-agent AI avatars. Build an avatar once, run it on your own infrastructure, and let it work across the tools your team already uses.',link:'https://asai.astrosynapse.ai/',linkLbl:'Try ASAI now',ext:true,
       tiles:[{lbl:'Status',big:'Early access',sub:'Invite-based onboarding',bars:[6,9]},{lbl:'Architecture',big:'Multi-agent',sub:'Multi-LLM · no-code',cyan:true},{lbl:'Runs on',big:'Self-hosted',sub:'Your hardware, your data'},{lbl:'Integrations',big:'4 plugins',sub:'Slack · Trello · Discord · Jira'}],
       tags:['No-code','Multi-agent','Multi-LLM','Self-hosted','Slack/Trello/Discord/Jira plugins']},
-    interpress:{idx:'002',badge:'Live',cls:'badge--live',title:'Interpress',desc:'Instant AI-powered document translation and interpretation across 200+ languages, with layout and formatting preserved end-to-end.',link:'https://interpress.app/',linkLbl:'Open Interpress',ext:true,
+    interpress:{page:'research/interpress.html',idx:'002',badge:'Live',cls:'badge--live',title:'Interpress',desc:'Instant AI-powered document translation and interpretation across 200+ languages, with layout and formatting preserved end-to-end.',link:'https://interpress.app/',linkLbl:'Open Interpress',ext:true,
       tiles:[{lbl:'Status',big:'Live',sub:'In production today',bars:[9,9]},{lbl:'Languages',big:'200+',sub:'Industry-tuned accuracy',cyan:true},{lbl:'Formatting',big:'Preserved',sub:'Tables, headings, layout'},{lbl:'Search',big:'Semantic',sub:'Find meaning, not strings'}],
       tags:['200+ languages','Formatting retention','Semantic search','Industry-tuned accuracy']},
-    gedor:{idx:'003',badge:'Waitlist',cls:'badge--wait',title:'Gedor',desc:'LLM-as-a-Service hosted entirely in the EU: an OpenAI-compatible API over an open-weight catalog, with managed vector databases and compliance built in.',link:'https://gedor.ai/',linkLbl:'Join the waitlist',ext:true,
+    gedor:{page:'research/gedor.html',idx:'003',badge:'Waitlist',cls:'badge--wait',title:'Gedor',desc:'LLM-as-a-Service hosted entirely in the EU: an OpenAI-compatible API over an open-weight catalog, with managed vector databases and compliance built in.',link:'https://gedor.ai/',linkLbl:'Join the waitlist',ext:true,
       tiles:[{lbl:'Status',big:'Waitlist',sub:'Opening in cohorts',bars:[4,9]},{lbl:'Hosted in',big:'EU',sub:'Fully sovereign inference',cyan:true},{lbl:'API',big:'OpenAI-compatible',sub:'Drop-in client support'},{lbl:'Compliance',big:'GDPR · AI Act',sub:'Managed vector DBs'}],
       tags:['OpenAI-compatible API','Open-weight catalog','Managed vector databases','GDPR & EU AI Act compliant']},
-    webagen:{idx:'004',badge:'In development',cls:'badge--dev',title:'webAgen',desc:'Agentic website generation platform: describe the site in conversation and let agents build it, content model and all.',link:'contact.html',linkLbl:'Contact us',ext:false,
+    webagen:{page:'research/webagen.html',idx:'004',badge:'In development',cls:'badge--dev',title:'webAgen',desc:'Agentic website generation platform: describe the site in conversation and let agents build it, content model and all.',link:'contact.html',linkLbl:'Contact us',ext:false,
       tiles:[{lbl:'Status',big:'In development',sub:'Private previews soon',bars:[2,9]},{lbl:'Interface',big:'Conversational',sub:'Describe it, iterate live',cyan:true},{lbl:'Output',big:'Agent-built CMS',sub:'Structured, editable content'},{lbl:'Powered by',big:'ASAI agents',sub:'Same multi-agent core'}],
       tags:['Conversational site-building','Agent-generated CMS']}
   };
@@ -54,7 +54,7 @@
     var b=document.getElementById('xpBadge');b.textContent=p.badge;b.className='badge '+p.cls;
     document.getElementById('xpTitle').textContent=p.title;
     document.getElementById('xpDesc').textContent=p.desc;
-    var l=document.getElementById('xpLink');l.textContent=p.linkLbl;l.href=p.link;if(p.ext){l.target='_blank';l.rel='noopener'}else{l.removeAttribute('target');l.removeAttribute('rel')}
+    var l=document.getElementById('xpLink');l.textContent=p.linkLbl;l.href=p.link;var fp=document.getElementById('xpPage');if(fp){fp.href=(location.pathname.indexOf('/research/')>-1?'../':'')+(p.page||'#')}if(p.ext){l.target='_blank';l.rel='noopener'}else{l.removeAttribute('target');l.removeAttribute('rel')}
     var h='';
     p.tiles.forEach(function(t,i){
       var d=(0.28+i*0.11).toFixed(2)+'s';
@@ -95,7 +95,8 @@
   }
   document.querySelectorAll('.glow-card[data-product]').forEach(function(card){
     card.addEventListener('click',function(e){
-      if(e.target.closest('.ulink'))return; // the inline link goes straight to the product
+      var ul=e.target.closest('.ulink');
+      if(ul){e.preventDefault();var ext=ul.getAttribute('data-ext');if(ext){if(/^https?:/.test(ext))window.open(ext,'_blank','noopener');else location.href=ext}return}
       e.preventDefault();openPanel(card);
     });
   });
