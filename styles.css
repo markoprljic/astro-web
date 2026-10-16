@@ -466,3 +466,7 @@ html.js [data-reveal="d1"]{transition-delay:.1s}html.js [data-reveal="d2"]{trans
   .gallery{grid-template-columns:1fr}.gallery .figure:first-child{grid-column:span 1}
   .fgrid[style*="repeat(4,1fr)"],.fgrid[style*="repeat(3,1fr)"]{grid-template-columns:1fr!important}
 }
+
+.scout-figure{margin-top:1.8rem;max-width:34rem}
+.player__frame--svg{aspect-ratio:auto;box-shadow:none}
+.player__frame--svg svg{display:block;width:100%;height:auto}
